@@ -1,0 +1,10 @@
+// 全局链接样式
+a {
+    color: #2563eb; // 对应 text-blue-600
+    transition: color 0.2s;
+
+    &:hover {
+        color: #1e40af; // 对应 text-blue-800
+        text-decoration: underline;
+    }
+}

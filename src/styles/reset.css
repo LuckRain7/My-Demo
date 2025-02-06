@@ -1,0 +1,81 @@
+@layer base {
+    /* 将 reset.css 的样式放在这里 */
+    /* 或者在这里重写需要覆盖的样式 */
+
+    /* 重置所有元素的边距和内边距 */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* 重置基础HTML元素 */
+    html,
+    body {
+        height: 100%;
+    }
+
+    /* 重置字体相关属性 */
+    body {
+        line-height: 1;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+            'Helvetica Neue', Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* 移除列表样式 */
+    ol,
+    ul {
+        list-style: none;
+    }
+
+    /* 重置链接样式 */
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    /* 重置表格边框 */
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+
+    /* 重置图片的默认行为 */
+    img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    /* 重置表单元素 */
+    button,
+    input,
+    select,
+    textarea {
+        font-family: inherit;
+        font-size: 100%;
+        line-height: 1.15;
+        margin: 0;
+    }
+
+    /* 移除按钮的默认样式 */
+    button {
+        border: none;
+        background: none;
+        padding: 0;
+        cursor: pointer;
+    }
+
+    /* 确保文本域不能调整大小 */
+    textarea {
+        resize: none;
+    }
+
+    /* 移除 input 的默认外观 */
+    input {
+        outline: none;
+        border: none;
+    }
+}

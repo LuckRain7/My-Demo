@@ -14,43 +14,41 @@ import RouterConfig from '@/router/config';
 
 <style lang="scss" scoped>
 .home-container {
-    padding: 20px;
+    padding: 12px;
     display: flex;
+    height: 100%;
 
     .nav-list {
         list-style: none;
         padding: 0;
+        width: 100%;
 
         li {
-            margin: 10px 0;
+            margin: 8px 0;
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 8px;
 
             .index-number {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                width: 24px;
-                height: 24px;
-                background-color: #e3f2fd;
-                color: #1e88e5;
+                width: 20px;
+                height: 20px;
                 border-radius: 50%;
                 font-size: 14px;
-                font-weight: 500;
+                background-color: #f5f5f5;
             }
 
             a {
                 text-decoration: none;
+                font-size: 14px;
                 color: #333;
-                font-size: 16px;
-                padding: 8px 16px;
+                padding: 6px 10px;
                 border-radius: 4px;
-                transition: all 0.3s ease;
 
                 &:hover {
-                    background-color: #f0f0f0;
-                    color: #1e88e5;
+                    background-color: #f5f5f5;
                 }
             }
         }

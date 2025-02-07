@@ -2,7 +2,9 @@
     <header class="header">
         <div class="header__container">
             <div class="header__logo">
-                <h1>webpack5-vue3-ts-tailwindcss-elementPlus</h1>
+                <router-link to="/">
+                    <h1 class="cyber-text">> My-Demo_</h1>
+                </router-link>
             </div>
 
             <nav class="header__nav">
@@ -16,7 +18,7 @@
 
             <div class="header__actions">
                 <button class="header__button" @click="triggerFireworks">
-                    Hello World
+                    > Execute
                 </button>
             </div>
         </div>
@@ -39,13 +41,13 @@ const triggerFireworks = () => {
 <style lang="scss" scoped>
 .header {
     height: 60px;
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(0, 0, 0, 0.9);
     backdrop-filter: blur(10px);
     transition: all 0.3s ease;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border-bottom: 1px solid #00ff00;
 
     &--scrolled {
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 2px 10px rgba(0, 255, 0, 0.2);
     }
 
     &__container {
@@ -62,7 +64,9 @@ const triggerFireworks = () => {
         h1 {
             font-size: 24px;
             font-weight: bold;
-            color: #333;
+            color: #00ff00;
+            font-family: 'Courier New', monospace;
+            text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
         }
     }
 
@@ -102,22 +106,56 @@ const triggerFireworks = () => {
         }
     }
 
+    .cyber-text {
+        animation: blink 1.5s infinite;
+    }
+
     &__button {
         height: 40px;
         padding: 0 24px;
         font-size: 16px;
-        border: none;
-        border-radius: 20px;
-        background: #007bff;
-        color: white;
+        border: 1px solid #00ff00;
+        border-radius: 4px;
+        background: transparent;
+        color: #00ff00;
+        font-family: 'Courier New', monospace;
         font-weight: 500;
         cursor: pointer;
         transition: all 0.2s ease;
+        text-transform: uppercase;
+        position: relative;
+        overflow: hidden;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(0, 255, 0, 0.2),
+                transparent
+            );
+            transition: 0.5s;
+        }
 
         &:hover {
-            background: #0056b3;
+            background: rgba(0, 255, 0, 0.1);
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
             transform: translateY(-2px);
+
+            &::before {
+                left: 100%;
+            }
         }
     }
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
 }
 </style>
